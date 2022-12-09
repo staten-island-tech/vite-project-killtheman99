@@ -31,3 +31,20 @@ body {
 .center {
   margin: auto;
 }
+
+#container {
+  width: 100vw;
+  display: flex;
+  position: relative;
+  top: 60px;
+}
+ #container > div{
+  height: 500px;
+  width: 500px;
+  border: 2px solid white;
+}
+
+#container img {
+  height: 350px;
+  max-width: 100%;
+}

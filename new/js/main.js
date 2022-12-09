@@ -1,9 +1,11 @@
 import "../styles/style.css";
 import { t } from "./themes.js";
+import { p } from "./array.js";
 
 const DOM = {
   root: document.documentElement,
   button: document.getElementById("btn"),
+  container: document.getElementById("container"),
 };
 function changetheme(theme) {
   let keys1 = Object.keys(theme);
@@ -22,3 +24,15 @@ DOM.button.addEventListener("click", function () {
     theme = "dark";
   }
 });
+p.filter((element) => element.img).forEach((element) =>
+  DOM.container.insertAdjacentHTML(
+    "beforeend",
+    `<div>
+      <div class="flexlr">
+
+    <img src=${element.img}>
+    <p1>Milotic</p1>
+    </div>
+    </div>`
+  )
+);
