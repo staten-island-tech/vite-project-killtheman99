@@ -29,10 +29,11 @@ p.filter((element) => element.img).forEach((element) =>
     "beforeend",
     `<div>
       <div class="flexlr">
-
-    <img src=${element.img}>
-    <p1>Milotic</p1>
-    </div>
+        <img class="image" src=${element.img}>
+        <div>
+          <h3 class="Name">${element.name.english}</h3>
+        </div>
+      </div>
     </div>`
   )
 );

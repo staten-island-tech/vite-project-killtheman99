@@ -251,6 +251,7 @@ const pokemons = [
       "Sp. Defense": 87,
       Speed: 51,
     },
+    img: "https://64.media.tumblr.com/28934f4991a0133b4391399878d24fa4/tumblr_ng0slnpqqw1s7wmzto2_500.jpg",
   },
   {
     id: 358,
@@ -324,5 +325,13 @@ const pokemons = [
       Speed: 50,
     },
   },
+  {
+    id: 362,
+    name: {
+      english: "Blastoise",
+    },
+    type: ["Water"],
+    img: "https://i.pinimg.com/originals/78/7c/a3/787ca3c47ebd9d4bb5888b735be4f5f0.jpg",
+  },
 ];
-export let p = pokemons
+export let p = pokemons;

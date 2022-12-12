@@ -3,6 +3,9 @@
   --bodycolor: #000;
   --buttoncolor: #000;
   --textcolor: #000;
+  --cardcolor: #000;
+  --bordercolor: #000;
+  --imagecolor: #000;
 }
 #topbar {
   height: 50px;
@@ -36,15 +39,41 @@ body {
   width: 100vw;
   display: flex;
   position: relative;
+  justify-content: space-around;
   top: 60px;
 }
  #container > div{
   height: 500px;
   width: 500px;
-  border: 2px solid white;
+  border: 2px solid var(--bordercolor);
+  background-color: var(--cardcolor);
+
+}
+
+#container > div:hover{
+  transition: scale(1.025);
 }
 
 #container img {
   height: 350px;
   max-width: 100%;
+ 
+}
+.flexlr {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+
+}
+
+
+.flexlr > div {
+  text-align: center;
+  width: 100%;
+  
+}
+
+.image {
+  border: 1px solid var(--imagecolor) ;
 }
