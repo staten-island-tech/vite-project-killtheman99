@@ -47,11 +47,12 @@ body {
   width: 500px;
   border: 2px solid var(--bordercolor);
   background-color: var(--cardcolor);
+  transition: all 0.3s;
 
 }
 
 #container > div:hover{
-  transition: scale(1.025);
+  transform: scale(1.025);
 }
 
 #container img {
