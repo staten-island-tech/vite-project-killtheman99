@@ -34,6 +34,7 @@ p.filter((element) => element.img).forEach((element) =>
           <h3 class="Name">${element.name.english}</h3>
         </div>
       </div>
+      
     </div>`
   )
 );

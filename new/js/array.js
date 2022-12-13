@@ -308,6 +308,14 @@ const pokemons = [
     },
   },
   {
+    id: 362,
+    name: {
+      english: "Blastoise",
+    },
+    type: ["Water"],
+    img: "https://i.pinimg.com/originals/78/7c/a3/787ca3c47ebd9d4bb5888b735be4f5f0.jpg",
+  },
+  {
     id: 361,
     name: {
       english: "Snorunt",
@@ -324,14 +332,23 @@ const pokemons = [
       "Sp. Defense": 50,
       Speed: 50,
     },
+    img: "https://media.tenor.com/REKFrAHNtvAAAAAC/snorunt-pokemon.gif",
   },
   {
-    id: 362,
+    id: 363,
     name: {
-      english: "Blastoise",
+      english: "Suicune",
     },
     type: ["Water"],
-    img: "https://i.pinimg.com/originals/78/7c/a3/787ca3c47ebd9d4bb5888b735be4f5f0.jpg",
+    img: "https://wallpapercave.com/wp/wp2680210.jpg",
+  },
+  {
+    id: 363,
+    name: {
+      english: "Lugia",
+    },
+    type: ["Psychic, Flying"],
+    img: "https://i.pinimg.com/originals/28/a1/86/28a18670da7c2219cd7c2d9104e5039f.jpg",
   },
 ];
 export let p = pokemons;

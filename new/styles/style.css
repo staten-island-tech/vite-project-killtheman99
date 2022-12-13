@@ -41,13 +41,15 @@ body {
   position: relative;
   justify-content: space-around;
   top: 60px;
+  flex-wrap: wrap;
 }
  #container > div{
   height: 500px;
-  width: 500px;
+  width: 28%;
   border: 2px solid var(--bordercolor);
   background-color: var(--cardcolor);
   transition: all 0.3s;
+  margin: 50px auto;
 
 }
 
@@ -57,7 +59,7 @@ body {
 
 #container img {
   height: 350px;
-  max-width: 100%;
+  max-width: 54%;
  
 }
 .flexlr {
