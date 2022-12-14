@@ -40,7 +40,7 @@ body {
   display: flex;
   position: relative;
   justify-content: space-around;
-  top: 60px;
+  top: 75px;
   flex-wrap: wrap;
 }
  #container > div{
@@ -79,4 +79,16 @@ body {
 
 .image {
   border: 1px solid var(--imagecolor) ;
+}
+
+#filter {
+color: var(--textcolor);
+position: relative;
+top: 60px;
+margin: auto auto;
+text-align: center;
+}
+
+#checkbox{
+  margin: auto;
 }
