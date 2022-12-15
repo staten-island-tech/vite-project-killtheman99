@@ -7,6 +7,8 @@ const DOM = {
   button: document.getElementById("btn"),
   container: document.getElementById("container"),
   checkbox: document.getElementById("checkbox"),
+  checkbox2: document.getElementById("checkbox2"),
+  checkbox3: document.getElementById("checkbox3"),
 };
 function changetheme(theme) {
   let keys1 = Object.keys(theme);
@@ -61,6 +63,30 @@ DOM.checkbox.addEventListener("click", function () {
     checked = true;
     buildBoard(function (element) {
       return element.type.includes("Water");
+    });
+  }
+});
+DOM.checkbox2.addEventListener("click", function () {
+  DOM.container.innerHTML = "";
+  if (checked) {
+    checked = false;
+    buildBoard();
+  } else {
+    checked = true;
+    buildBoard(function (element) {
+      return element.type.includes("Flying");
+    });
+  }
+});
+DOM.checkbox3.addEventListener("click", function () {
+  DOM.container.innerHTML = "";
+  if (checked) {
+    checked = false;
+    buildBoard();
+  } else {
+    checked = true;
+    buildBoard(function (element) {
+      return element.name2.includes("Dumb");
     });
   }
 });

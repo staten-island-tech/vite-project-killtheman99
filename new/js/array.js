@@ -125,6 +125,7 @@ const pokemons = [
       Speed: 81,
     },
     img: "https://i.pinimg.com/originals/f8/72/50/f872506602c3e032397bc7efbcb162bc.jpg",
+    name2: ["Dumb"],
   },
   {
     id: 351,
@@ -252,6 +253,7 @@ const pokemons = [
       Speed: 51,
     },
     img: "https://64.media.tumblr.com/28934f4991a0133b4391399878d24fa4/tumblr_ng0slnpqqw1s7wmzto2_500.jpg",
+    name2: ["Dumb"],
   },
   {
     id: 358,
@@ -314,6 +316,7 @@ const pokemons = [
     },
     type: ["Water"],
     img: "https://i.pinimg.com/originals/78/7c/a3/787ca3c47ebd9d4bb5888b735be4f5f0.jpg",
+    name2: ["Dumb"],
   },
   {
     id: 361,
@@ -333,6 +336,7 @@ const pokemons = [
       Speed: 50,
     },
     img: "https://media.tenor.com/REKFrAHNtvAAAAAC/snorunt-pokemon.gif",
+    name2: ["Dumb"],
   },
   {
     id: 363,
@@ -341,14 +345,16 @@ const pokemons = [
     },
     type: ["Water"],
     img: "https://wallpapercave.com/wp/wp2680210.jpg",
+    name2: ["Dumb"],
   },
   {
     id: 363,
     name: {
       english: "Lugia",
     },
-    type: ["Psychic, Flying"],
+    type: ["Psychic", "Flying"],
     img: "https://i.pinimg.com/originals/28/a1/86/28a18670da7c2219cd7c2d9104e5039f.jpg",
+    name2: ["Dumb"],
   },
 ];
 export let p = pokemons;
