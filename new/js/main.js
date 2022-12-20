@@ -27,14 +27,24 @@ DOM.button.addEventListener("click", function () {
     theme = "dark";
   }
 });
-function buildBoard(_filter) {
-  _filter =
-    _filter ||
-    function () {
-      return true;
-    };
+let filterArray = [
+  function () {
+    return true;
+  },
+];
+function screenWithFilters(value) {
+  let good = true;
+  filterArray.forEach((_filter) => {
+    console.log(!_filter(value));
+    if (!_filter(value)) {
+      good = false;
+    }
+  });
+  return good;
+}
+function buildBoard() {
   p.filter((element) => element.img)
-    .filter(_filter)
+    .filter(screenWithFilters)
     .forEach((element) =>
       DOM.container.insertAdjacentHTML(
         "beforeend",
@@ -52,41 +62,24 @@ function buildBoard(_filter) {
     );
 }
 buildBoard();
-let checked = false;
 
 DOM.checkbox.addEventListener("click", function () {
   DOM.container.innerHTML = "";
-  if (checked) {
-    checked = false;
-    buildBoard();
-  } else {
-    checked = true;
-    buildBoard(function (element) {
-      return element.type.includes("Water");
-    });
-  }
+  filterArray.push(function (element) {
+    return element.type.includes("Water");
+  });
+  buildBoard();
 });
 DOM.checkbox2.addEventListener("click", function () {
   DOM.container.innerHTML = "";
-  if (checked) {
-    checked = false;
-    buildBoard();
-  } else {
-    checked = true;
-    buildBoard(function (element) {
-      return element.type.includes("Flying");
-    });
-  }
+
+  filterArray.push(function (element) {
+    return element.type.includes("Flying");
+  });
+  buildBoard();
 });
 DOM.checkbox3.addEventListener("click", function () {
   DOM.container.innerHTML = "";
-  if (checked) {
-    checked = false;
-    buildBoard();
-  } else {
-    checked = true;
-    buildBoard(function (element) {
-      return element.name2.includes("Dumb");
-    });
-  }
+  filterArray.length = 1;
+  buildBoard();
 });
