@@ -10,6 +10,7 @@ const DOM = {
   checkbox2: document.getElementById("checkbox2"),
   checkbox3: document.getElementById("checkbox3"),
 };
+
 function changetheme(theme) {
   let keys1 = Object.keys(theme);
   keys1.forEach((element) => {
@@ -27,59 +28,55 @@ DOM.button.addEventListener("click", function () {
     theme = "dark";
   }
 });
-let filterArray = [
-  function () {
-    return true;
-  },
-];
-function screenWithFilters(value) {
-  let good = true;
-  filterArray.forEach((_filter) => {
-    console.log(!_filter(value));
-    if (!_filter(value)) {
-      good = false;
-    }
-  });
-  return good;
-}
-function buildBoard() {
-  p.filter((element) => element.img)
-    .filter(screenWithFilters)
-    .forEach((element) =>
-      DOM.container.insertAdjacentHTML(
-        "beforeend",
-        `<div>
-        <div class="flexlr">
-          <img class="image" src=${element.img}>
-          <div>
-            <h3 class="Name">${element.name.english}</h3>
-            <h4>Type: ${element.type}</h4>
-          </div>
-        </div>
-        
-      </div>`
-      )
+
+function makecard() {
+  document.getElementById("pokemon").innerHTML = "";
+  p.forEach((pokemon) => {
+    document.getElementById("pokemon").insertAdjacentHTML(
+      "beforeend",
+      `<div class="flexlr" id=${pokemon.name}>
+        <img class="w-image" src="${pokemon.img}"/> </div>`
     );
+  });
 }
-buildBoard();
+makecard();
 
-DOM.checkbox.addEventListener("click", function () {
-  DOM.container.innerHTML = "";
-  filterArray.push(function (element) {
-    return element.type.includes("Water");
-  });
-  buildBoard();
-});
-DOM.checkbox2.addEventListener("click", function () {
-  DOM.container.innerHTML = "";
+// function buildBoard() {
+//   p.filter(
+//     (element) =>
+//       element.img &&
+//       (!flyFilter || element.includes("flying")) &&
+//       (!waterFilter || element.includes("water"))
+//   ).forEach((element) =>
+//     DOM.container.insertAdjacentHTML(
+//       "beforeend",
+//       `<div>
+//         <div class="flexlr">
+//           <img class="image" src=${element.img}>
+//           <div>
+//             <h3 class="Name">${element.name.english}</h3>
+//             <h4>Type: ${element.type}</h4>
+//           </div>
+//         </div>
 
-  filterArray.push(function (element) {
-    return element.type.includes("Flying");
-  });
-  buildBoard();
-});
-DOM.checkbox3.addEventListener("click", function () {
-  DOM.container.innerHTML = "";
-  filterArray.length = 1;
-  buildBoard();
-});
+//       </div>`
+//     )
+//   );
+// }
+// buildBoard();
+
+// DOM.checkbox.addEventListener("click", function () {
+//   DOM.container.innerHTML = "";
+//   waterFilter = !waterFilter;
+//   buildBoard();
+// });
+// DOM.checkbox2.addEventListener("click", function () {
+//   DOM.container.innerHTML = "";
+//   flyFilter = !flyFilter;
+//   buildBoard();
+// });
+// DOM.checkbox3.addEventListener("click", function () {
+//   DOM.container.innerHTML = "";
+//   filterArray.length = 1;
+//   buildBoard();
+// });
