@@ -25,17 +25,31 @@ body {
   color: var(--textcolor);
 }
 .flexlr {
-  display: flex;
-  justify-content: space-between;
+  width: 28%;
+  border: 2px solid var(--bordercolor);
+  background-color: var(--cardcolor);
+  margin: 20px;
 }
 
 .w-image {
   height: 400px;
-  width: 300px;
+  width: 275px;
+  margin-bottom: 100px;
 }
 
 #pokemon {
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.buttons {
+  text-align: center;
+  color: var(--textcolor);
+  z-index: 2;
 }
 
 /* }

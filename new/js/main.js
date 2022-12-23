@@ -31,7 +31,7 @@ DOM.button.addEventListener("click", function () {
 
 function makecard() {
   document.getElementById("pokemon").innerHTML = "";
-  p.forEach((pokemon) => {
+  p.filter((pokemon) => pokemon.img).forEach((pokemon) => {
     document.getElementById("pokemon").insertAdjacentHTML(
       "beforeend",
       `<div class="flexlr" id=${pokemon.name}>
@@ -40,6 +40,34 @@ function makecard() {
   });
 }
 makecard();
+
+function makewater() {
+  document.getElementById("pokemon").innerHTML = "";
+  p.filter((pokemon) => pokemon.img)
+    .filter((pokemon) => pokemon.type.includes("Water"))
+    .forEach((pokemon) => {
+      document.getElementById("pokemon").insertAdjacentHTML(
+        "beforeend",
+        `<div class="flexlr" id=${pokemon.name}>
+        <img class="w-image" src="${pokemon.img}"/> </div>`
+      );
+    });
+}
+makewater();
+
+function makeflying() {
+  document.getElementById("pokemon").innerHTML = "";
+  p.filter((pokemon) => pokemon.img)
+    .filter((pokemon) => pokemon.type.includes("Flying"))
+    .forEach((pokemon) => {
+      document.getElementById("pokemon").insertAdjacentHTML(
+        "beforeend",
+        `<div class="flexlr" id=${pokemon.name}>
+        <img class="w-image" src="${pokemon.img}"/> </div>`
+      );
+    });
+}
+makeflying();
 
 // function buildBoard() {
 //   p.filter(
