@@ -20,6 +20,14 @@
   flex-direction: row;
   align-items: center;
 }
+
+.center {
+  margin: auto;
+  justify-content: center;
+  display: inline-block;
+  text-align: center;
+}
+
 body {
   background-color: var(--bodycolor);
   color: var(--textcolor);
@@ -29,6 +37,11 @@ body {
   border: 2px solid var(--bordercolor);
   background-color: var(--cardcolor);
   margin: 20px;
+ transition: all 0.5s;
+}
+
+.flexlr:hover {
+transform:  scale(1.05);
 }
 
 .w-image {
@@ -39,6 +52,7 @@ body {
 
 #pokemon {
   margin: 100px;
+  
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -61,13 +75,9 @@ button {
   width: 60px;
 }
 
-#all {
-  border: 2px solid var(--bodycolor);
-}
 
 .dropbtn {
-  text-align: end;
-  display: block;
+  display: flex;
   
 }
 /* }

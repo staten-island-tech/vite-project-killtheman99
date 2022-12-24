@@ -38,8 +38,10 @@ function makecard() {
     document.getElementById("pokemon").insertAdjacentHTML(
       "beforeend",
       `<div class="flexlr" id=${pokemon.name}>
-        <img class="w-image" src="${pokemon.img}"/> 
-        <p>${pokemon.name.english}</p></div>`
+        <div id="card"><img class="w-image" src="${pokemon.img}"/> 
+        <p>${pokemon.name.english}</p>
+        </div>
+        </div>`
     );
   });
 }
@@ -53,8 +55,10 @@ function makewater() {
       document.getElementById("pokemon").insertAdjacentHTML(
         "beforeend",
         `<div class="flexlr" id=${pokemon.name}>
-        <img class="w-image" src="${pokemon.img}"/>
-        <p>${pokemon.name.english}</p> </div>`
+        <div><img class="w-image" src="${pokemon.img}"/>
+        <p>${pokemon.name.english}</p>
+        </div> 
+        </div>`
       );
     });
 }
@@ -70,17 +74,15 @@ function makeflying() {
         `<div class="flexlr" id=${pokemon.name}>
         <img class="w-image" src="${pokemon.img}"/>
         <p>${pokemon.name.english}</p> </div>`
-
       );
     });
 }
 makeflying();
 makecard();
 
-DOM.allbtn.addEventListener("click", makecard)
-DOM.waterbtn.addEventListener("click", makewater)
-DOM.flyingbtn.addEventListener("click", makeflying)
-
+DOM.allbtn.addEventListener("click", makecard);
+DOM.waterbtn.addEventListener("click", makewater);
+DOM.flyingbtn.addEventListener("click", makeflying);
 
 // function buildBoard() {
 //   p.filter(
