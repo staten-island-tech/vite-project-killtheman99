@@ -9,6 +9,9 @@ const DOM = {
   checkbox: document.getElementById("checkbox"),
   checkbox2: document.getElementById("checkbox2"),
   checkbox3: document.getElementById("checkbox3"),
+  allbtn: document.getElementById("all"),
+  waterbtn: document.getElementById("water"),
+  flyingbtn: document.getElementById("flying"),
 };
 
 function changetheme(theme) {
@@ -35,7 +38,8 @@ function makecard() {
     document.getElementById("pokemon").insertAdjacentHTML(
       "beforeend",
       `<div class="flexlr" id=${pokemon.name}>
-        <img class="w-image" src="${pokemon.img}"/> </div>`
+        <img class="w-image" src="${pokemon.img}"/> 
+        <p>${pokemon.name.english}</p></div>`
     );
   });
 }
@@ -49,7 +53,8 @@ function makewater() {
       document.getElementById("pokemon").insertAdjacentHTML(
         "beforeend",
         `<div class="flexlr" id=${pokemon.name}>
-        <img class="w-image" src="${pokemon.img}"/> </div>`
+        <img class="w-image" src="${pokemon.img}"/>
+        <p>${pokemon.name.english}</p> </div>`
       );
     });
 }
@@ -63,11 +68,19 @@ function makeflying() {
       document.getElementById("pokemon").insertAdjacentHTML(
         "beforeend",
         `<div class="flexlr" id=${pokemon.name}>
-        <img class="w-image" src="${pokemon.img}"/> </div>`
+        <img class="w-image" src="${pokemon.img}"/>
+        <p>${pokemon.name.english}</p> </div>`
+
       );
     });
 }
 makeflying();
+makecard();
+
+DOM.allbtn.addEventListener("click", makecard)
+DOM.waterbtn.addEventListener("click", makewater)
+DOM.flyingbtn.addEventListener("click", makeflying)
+
 
 // function buildBoard() {
 //   p.filter(

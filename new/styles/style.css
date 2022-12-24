@@ -38,20 +38,38 @@ body {
 }
 
 #pokemon {
-  margin: auto;
+  margin: 100px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: auto;
-  justify-content: space-between;
+  
+  justify-content: space-around;
 }
 
 .buttons {
   text-align: center;
   color: var(--textcolor);
-  z-index: 2;
+ display: block;
+ position: relative;
+ top: 75px;
+ margin-bottom: 50px;
+ justify-content: space-around;
+ display: flex;
 }
 
+button {
+  width: 60px;
+}
+
+#all {
+  border: 2px solid var(--bodycolor);
+}
+
+.dropbtn {
+  text-align: end;
+  display: block;
+  
+}
 /* }
 
 #btn {
